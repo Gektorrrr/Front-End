@@ -1,0 +1,4 @@
+<div class="chips-container" [ngClass]="{'editable': isEditable, 'active': isActive}">
+  <div *ngFor="let chip of chips.split(',')" class="chip">{{ chip }}</div>
+  <button *ngIf="isEditable" (click)="emitEditChipsStatus()">Edit</button>
+</div>
